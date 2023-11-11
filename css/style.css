@@ -5,7 +5,12 @@
 
 .navbar-toggler {
     margin-left: auto;
-  }
+}
+
+.error-mensaje {
+  color: #FF0000;
+  display: none;
+}
   
   @media (min-width: 768px) {
     .navbar-toggler {

@@ -9,6 +9,7 @@
     <title>CV - Gustavo Veliz - Contacto</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    
   </head>
   <body>
     <div class="container py-3">
@@ -36,6 +37,9 @@
                         <a class="nav-link" href="experiencia.html">Experiencia</a>
                       </li>
                       <li class="nav-item">
+                        <a class="nav-link" href="intereses.html">Intereses</a>
+                      </li>
+                      <li class="nav-item">
                         <a class="nav-link" href="contacto.html">Contacto</a>
                       </li>
                     </ul>
@@ -45,41 +49,50 @@
         </header>
 
     <main>
+
+
+
+    <div class="row">
+        <div class="col mb-4 fs-4 fw-bold">
+            Contacto
+        </div>
+    </div>
+
+    <form id="form-mensaje" name="form-mensaje" action="">
+      <div class="mx-auto col-md-8 col-sm-12">
         <div class="row">
-            <div class="col mb-4 fs-4 fw-bold">
-                Contacto
-            </div>
-        </div>
-
-        <div class="mx-auto col-md-8 col-sm-12">
-            <div class="row">
-                <div class="">
-                    <div class="mb-3">
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nombre">
-                    </div>
-                    <div class="mb-3">
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Correo electronico">
-                    </div>
-                    <div class="mb-3">
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Asunto">
-                    </div>
-                    <div class="mb-3">
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">Mensaje</textarea>
-                    </div>
+            <div class="">
+                <div class="mb-3">
+                    <span class="error-mensaje" id="e-nombre">* El campo es obligatorio</span>
+                    <input type="text" id="nombre" name="nombre" class="form-control" id="exampleFormControlInput1" placeholder="Nombre">
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-2">
-                    <button type="button" class="btn btn-primary">Enviar</button>
+                <div class="mb-3">
+                  <span class="error-mensaje" id="e-email">* El campo es obligatorio y deber ser un mail</span>
+                    <input type="email" id="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="Correo electronico">
+                </div>
+                <div class="mb-3">
+                  <span class="error-mensaje" id="e-asunto">* El campo es obligatorio</span>
+                    <input type="text" id="asunto" name="asunto" class="form-control" id="exampleFormControlInput1" placeholder="Asunto">
+                </div>
+                <div class="mb-3">
+                  <span class="error-mensaje" id="e-mensaje">* El campo es obligatorio</span>
+                    <textarea class="form-control" id="mensaje" name="mensaje" id="exampleFormControlTextarea1" rows="3" placeholder="Mensaje"></textarea>
                 </div>
             </div>
         </div>
-
+        <div class="row">
+            <div class="col-md-2">
+                <button type="button" class="btn btn-primary" onclick="enviarFormulario(document.getElementById('form-mensaje'))">Enviar</button>
+            </div>
+        </div>
+    </form>
+    
+    </div>
         
     </main>
-
     
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/validacion.js"></script>
     </body>
 </html>
