@@ -55,7 +55,6 @@ const enviarFormulario = (formulario) =>{
     let eMensaje = valMensaje(formulario.mensaje.value)
 
     if (eNombre && eEmail && eAsunto && eMensaje) {
-        console.log('jfoejfoe');
         // Si pasa todas las validacion el formulario se envia
         alert('Formulario enviado correctamente!!!');
     } else {
